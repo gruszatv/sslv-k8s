@@ -20,4 +20,3 @@ after_success:
   - docker push gruszatv/sslv-nginx
   - docker push gruszatv/sslv-server
   - docker push gruszatv/sslv-worker
-
