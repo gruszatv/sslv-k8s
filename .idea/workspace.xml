@@ -54,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dockerrun.aws.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+            <state relative-caret-position="479">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -178,12 +178,12 @@
       <updated>1557859808047</updated>
       <workItem from="1557859809148" duration="8104000" />
       <workItem from="1557945218160" duration="3888000" />
-      <workItem from="1557951708794" duration="12050000" />
+      <workItem from="1557951708794" duration="12189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24042000" />
+    <option name="totallyTimeSpent" value="24181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="976" extended-state="0" />
@@ -401,8 +401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Dockerrun.aws.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        <state relative-caret-position="479">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>
