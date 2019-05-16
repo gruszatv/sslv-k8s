@@ -20,3 +20,17 @@ after_success:
   - docker push grusza/sslv-nginx
   - docker push grusza/sslv-server
   - docker push grusza/sslv-worker
+
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "sslv"
+  env: "Sslv-env"
+  bucket_name: "elasticbeanstalk-eu-central-1-868884770340"
+  bucket_path: "sslv"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
