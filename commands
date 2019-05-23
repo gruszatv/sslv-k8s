@@ -1,0 +1,9 @@
+kubectl get pods
+kubectl get deployments
+minikube ip
+kubectl apply -f ***.yml
+kubectl set image deployment/client-deployment client=grusza/sslv-client:v7
+eval $(minikube docker-env)
+kubectl delete deployments ****
+kubectl get services
+kubectl logs *****
