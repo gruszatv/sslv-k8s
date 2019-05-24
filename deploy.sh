@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 docker build -t grusza/sslv-client:latest -t grusza/sslv-client:$SHA -f ./client/Dockerfile ./client
-docker build -t grusza/sslv-server:latest -t grusza/sslv:server:$SHA -f ./server/Dockerfile ./server
+docker build -t grusza/sslv-server:latest -t grusza/sslv-server:$SHA -f ./server/Dockerfile ./server
 docker build -t grusza/sslv-worker:latest -t grusza/sslv-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push grusza/sslv-client:latest
