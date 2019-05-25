@@ -1,0 +1,8 @@
+apiVersion: skaffold/v1beta8
+kind: Config
+build:
+  artifacts:
+    - image: grusza/sslv-client
+      context: ./client/
+#    - image: gcr.io/k8s-skaffold/leeroy-app
+#      context: ./leeroy-app/

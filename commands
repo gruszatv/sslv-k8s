@@ -7,3 +7,18 @@ eval $(minikube docker-env)
 kubectl delete deployments ****
 kubectl get services
 kubectl logs *****
+
+
+/////
+Google Cloud
+
+ID: qualified-gist-239722
+IAM Name: alexsitdikov
+
+1) gcloud iam service-accounts create alexsitdikov
+
+2) gcloud projects add-iam-policy-binding qualified-gist-239722 --member "serviceAccount:alexsitdikov@qualified-gist-239722.iam.gserviceaccount.com" --role "roles/owner"
+
+3) gcloud iam service-accounts keys create service-accounts.json --iam-account alexsitdikov@qualified-gist-239722.iam.gserviceaccount.com
+
+4) export GOOGLE_APPLICATION_CREDENTIALS="/Users/aleksejssitdikovs/work/complex/service-accounts.json"
