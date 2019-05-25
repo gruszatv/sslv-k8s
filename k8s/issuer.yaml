@@ -3,9 +3,9 @@ kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
 spec:
-  name:
+  acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: 'aleksejs.sitdikovs@gmail.com'
+    email: aleksejs.sitdikovs@gmail.com
     privateKeySecretRef:
       name: letsencrypt-prod
     http01: {}

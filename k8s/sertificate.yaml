@@ -18,3 +18,10 @@ spec:
         domains:
           - ssemail.info
           - www.ssemail.info
+
+            helm install \
+            --set webhook.enabled=false \
+            --name cert-manager \
+            --namespace cert-manager \
+            --version v0.8.0 \
+            jetstack/cert-manager
