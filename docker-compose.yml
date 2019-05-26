@@ -3,29 +3,27 @@ services:
   nginx:
     restart: always
     build:
-      dockerfile: /Users/aleksejssitdikovs/work/complex/nginx/Dockerfile.dev
+      dockerfile: /Users/aleksejssitdikovs/work/sslv/nginx/Dockerfile.dev
       context: nginx
     ports:
       - '3000:80'
   api:
     build:
-      dockerfile: /Users/aleksejssitdikovs/work/complex/server/Dockerfile.dev
+      dockerfile: /Users/aleksejssitdikovs/work/sslv/server/Dockerfile.dev
       context: server
     volumes:
       - /app/node_modules
       - ./server:/app
-    environment:
-      -
   client:
     build:
-      dockerfile: /Users/aleksejssitdikovs/work/complex/client/Dockerfile.dev
+      dockerfile: /Users/aleksejssitdikovs/work/sslv/client/Dockerfile.dev
       context: client
     volumes:
       - /app/node_modules
       - ./client:/app
   worker:
     build:
-      dockerfile: /Users/aleksejssitdikovs/work/complex/worker/Dockerfile.dev
+      dockerfile: /Users/aleksejssitdikovs/work/sslv/worker/Dockerfile.dev
       context: worker
     volumes:
       - /app/node_modules
