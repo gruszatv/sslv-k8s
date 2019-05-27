@@ -8,6 +8,10 @@ kubectl delete deployments ****
 kubectl get services
 kubectl logs *****
 
+docker kill $(docker ps -q)
+
+minikube status
+kubectl cluster-info
 
 /////
 Google Cloud
