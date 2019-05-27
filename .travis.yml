@@ -20,9 +20,9 @@ before_install:
 script:
   - docker run grusza/react-test npm test
 
-
 deploy:
   provider: script
+  github_token: $GH_TOKEN
   script: bash ./deploy.sh
   on:
     branch: master
