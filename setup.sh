@@ -9,3 +9,16 @@ brew cask install iterm2
 brew install zsh
 # Open Iterm2  chsh -s /bin/zsh
 # https://iterm2colorschemes.com/
+
+
+# https://github.com/kubernetes/minikube/blob/master/docs/drivers.md
+# https://kubernetes.io/docs/tasks/tools/install-minikube/#install-a-hypervisor
+# Install kubernetes kubectl, minikube
+curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+brew cask install minikube
+minikube config set vm-driver hyperkit
+# Minikube installation
+brew install hyperkit
+minikube start
+kubectl version
