@@ -9,15 +9,15 @@ build:
           - src: 'src/*'
             dest: .
       docker:
-        dockerfile: ./Dockerfile.dev
+        dockerfile: ./Dockerfile
     - image: grusza/sslv-server
       context: ./server/
       docker:
         dockerfile: ./Dockerfile.dev
-    - image: grusza/sslv-nginx
-      context: ./nginx/
-      docker:
-        dockerfile: ./Dockerfile.dev
+#    - image: grusza/sslv-nginx
+#      context: ./nginx/
+#      docker:
+#        dockerfile: ./Dockerfile.dev
 
 deploy:
   kubectl:
