@@ -22,8 +22,9 @@ const schema = makeExecutableSchema({
 });
 
 // Connects to database
+// mongodb://reed:reed@ds137720.mlab.com:37720/react-recipes
 mongoose
-    .connect("mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/dbname_?")
+    .connect("mongodb://reed:reed@ds137720.mlab.com:37720/react-recipes")
     .then(() => console.log("DB connected"))
     .catch(err => console.error(err));
 

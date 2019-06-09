@@ -7,11 +7,24 @@ eval $(minikube docker-env)
 kubectl delete deployments ****
 kubectl get services
 kubectl logs *****
+kubectl delete deployment client-deployment
 
 docker kill $(docker ps -q)
 
 minikube status
 kubectl cluster-info
+
+
+//
+DOCKER
+Stop all containers
+docker kill $(docker ps -q)
+
+# Delete all containers
+docker rm $(docker ps -a -q) -f
+# Delete all images
+docker rmi $(docker images -q) -f
+
 
 /////
 Google Cloud

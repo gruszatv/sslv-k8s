@@ -1,8 +1,25 @@
-apiVersion: skaffold/v1beta8
+apiVersion: skaffold/v1beta11
 kind: Config
 build:
   artifacts:
     - image: grusza/sslv-client
       context: ./client/
-#    - image: gcr.io/k8s-skaffold/leeroy-app
-#      context: ./leeroy-app/
+      sync:
+        manual:
+          - src: 'src/*'
+            dest: .
+      docker:
+        dockerfile: ./Dockerfile.dev
+    - image: grusza/sslv-server
+      context: ./server/
+      docker:
+        dockerfile: ./Dockerfile.dev
+    - image: grusza/sslv-nginx
+      context: ./nginx/
+      docker:
+        dockerfile: ./Dockerfile.dev
+
+deploy:
+  kubectl:
+    manifests:
+      - ./k8/*
