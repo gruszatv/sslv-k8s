@@ -23,8 +23,9 @@ const schema = makeExecutableSchema({
 
 // Connects to database
 // mongodb://reed:reed@ds137720.mlab.com:37720/react-recipes
+// mongodb://reed:reed@mongo:37720/react-recipes
 mongoose
-    .connect("mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/dbname_?")
+    .connect(process.env.MONGO_URI)
     .then(() => console.log("DB connected"))
     .catch(err => console.error(err));
 
@@ -32,7 +33,7 @@ mongoose
 const app = express();
 
 // const corsOptions = {
-//   origin: "http://localhost:3000",
+//   origin: "https://192.168.64.7",
 //   credentials: true
 // };
 app.use(cors("*"));
@@ -68,6 +69,9 @@ app.use(
     }))
 );
 
+app.get('/api/test', function (req, res) {
+    res.send('hello world')
+})
 
 
 // if (process.env.NODE_ENV === "production") {
