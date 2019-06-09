@@ -18,4 +18,3 @@ kubectl set image deployments/client-deployment client=grusza/sslv-client:$SHA
 kubectl set image deployments/worker-deployment worker=grusza/sslv-worker:$SHA
 
 
-docker build -t grusza/sslv-client:latest -f ./client/Dockerfile ./client
