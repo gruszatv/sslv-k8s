@@ -54,7 +54,7 @@ fetch('/api/test')
 
             console.log(response);
 
-        let data = response;
+        // let data = response;
             // Examine the text in the response
             // response.json().then(function(data) {
             //     console.log(data);
