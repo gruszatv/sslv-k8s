@@ -43,33 +43,6 @@ const client = new ApolloClient({
     }
 });
 
-fetch('/api/test')
-    .then(
-        function(response) {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' +
-                    response.status);
-                return;
-            }
-
-            console.log(response);
-
-        // let data = response;
-            // Examine the text in the response
-            // response.json().then(function(data) {
-            //     console.log(data);
-            // });
-        }
-    ).then((data)=>{
-    console.log(data);
-})
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
-
-
-
-
 const Root = ({ refetch, session }) => (
     <Router>
         <Fragment>

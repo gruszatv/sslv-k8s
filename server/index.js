@@ -69,12 +69,6 @@ app.use(
     }))
 );
 
-app.get('/test', function (req, res) {
-    let alex = {alex: "AAA"}
-    res.send("Yahoooo")
-})
-
-
 // if (process.env.NODE_ENV === "production") {
 //   app.use(express.static("client/build"));
 //
