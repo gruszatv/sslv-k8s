@@ -22,4 +22,4 @@ build:
 deploy:
   kubectl:
     manifests:
-      - ./k8/*
+      - ./k8_dev/*
