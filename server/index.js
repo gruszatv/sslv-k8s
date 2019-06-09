@@ -69,7 +69,7 @@ app.use(
     }))
 );
 
-app.get('/api/test', function (req, res) {
+app.get('/test', function (req, res) {
     res.send('hello world')
 })
 
