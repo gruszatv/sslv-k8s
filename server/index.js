@@ -70,7 +70,8 @@ app.use(
 );
 
 app.get('/test', function (req, res) {
-    res.send('hello world')
+    let alex = {alex: "AAA"}
+    res.send("Yahoooo")
 })
 
 
