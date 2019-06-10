@@ -1,0 +1,8 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mongo
+spec:
+  type: ExternalName
+  externalName: ds137720.mlab.com
+

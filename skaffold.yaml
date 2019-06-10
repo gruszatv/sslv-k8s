@@ -14,10 +14,6 @@ build:
       context: ./server/
       docker:
         dockerfile: ./Dockerfile.dev
-#    - image: grusza/sslv-nginx
-#      context: ./nginx/
-#      docker:
-#        dockerfile: ./Dockerfile.dev
 
 deploy:
   kubectl:
