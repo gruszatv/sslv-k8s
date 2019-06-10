@@ -9,7 +9,7 @@ build:
           - src: 'src/*'
             dest: .
       docker:
-        dockerfile: ./Dockerfile
+        dockerfile: ./Dockerfile.dev
     - image: grusza/sslv-server
       context: ./server/
       docker:
