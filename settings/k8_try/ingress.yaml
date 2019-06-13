@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata:
+    name: test-cert-manager-ingress
+    namespace: test-cert-manager-namespace
+  spec:
+    rules:
+      - host: ingress.kubernauts.sh
+      - http:
+          paths:
+            - backend:
+                serviceName: frontend
+                servicePort: 80

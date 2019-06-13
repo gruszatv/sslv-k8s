@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service-server
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+    nginx.ingress.kubernetes.io/rewrite-target: /get$1
+  namespace: default
+
+spec:
+  rules:
+    - host: ssemail.info
+      http:
+        paths:
+          - path: /api/get(.*)
+            backend:
+              serviceName: server-cluster-ip-service
+              servicePort: 3000
+  tls:
+    - hosts:
+        - ssemail.info
+        - www.ssemail.info
+      secretName: k8s-sslv-com
+    - host: www.ssemail.info
+      http:
+        paths:
+          - path: /api/get(.*)
+            backend:
+              serviceName: server-cluster-ip-service
+              servicePort: 3000

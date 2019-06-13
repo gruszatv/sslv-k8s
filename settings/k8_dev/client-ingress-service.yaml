@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: true
+    namespace: default
+    certmanager.k8s.io/cluster-issuer: letsencrypt-staging
+
+spec:
+  rules:
+    - host: alex.sitdikov
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: client-cluster-ip-service
+              servicePort: 3000
+  tls: # < placing a host in the TLS config will indicate a cert should be created
+    - hosts:
+        - alex.sitdikov
+      secretName: letsencrypt-staging

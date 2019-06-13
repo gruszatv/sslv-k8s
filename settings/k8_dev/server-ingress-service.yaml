@@ -1,0 +1,21 @@
+#apiVersion: extensions/v1beta1
+#kind: Ingress
+#metadata:
+#  name: ingress-service-b
+#  annotations:
+#    kubernetes.io/ingress.class: nginx
+#    kubernetes.io/tls-acme: "true"
+#    nginx.ingress.kubernetes.io/rewrite-target: /graphql$1
+#spec:
+#  rules:
+#    - host: alex.sitdikov
+#    - http:
+#        paths:
+#          - path: /api/graphql(.*)
+#            backend:
+#              serviceName: server-cluster-ip-service
+#              servicePort: 5000
+#  tls: # < placing a host in the TLS config will indicate a cert should be created
+#    - hosts:
+#        - alex.sitdikov
+#      secretName: letsencrypt-prod
