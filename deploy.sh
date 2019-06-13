@@ -12,7 +12,7 @@ docker push grusza/sslv-client:$SHA
 docker push grusza/sslv-server:$SHA
 #docker push grusza/sslv-worker:$SHA
 
-kubectl apply -f k8_prod
+kubectl apply -f k8/k8_prod
 kubectl set image deployments/server-deployment server=grusza/sslv-server:$SHA
 kubectl set image deployments/client-deployment client=grusza/sslv-client:$SHA
 #kubectl set image deployments/worker-deployment worker=grusza/sslv-worker:$SHA
